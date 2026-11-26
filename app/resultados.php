@@ -66,9 +66,25 @@ $misionTop = obtenerMisionMasCara($misiones);
 <h2>💵 Misión con Mayor Recompensa</h2>
 
     <?php if ($misionTop): ?>
+        
         <div class="card">
             <h3><?= htmlspecialchars($misionTop['nombre']); ?></h3>
-            <p><strong>Recompensa:</strong> <?php echo MONEDA .' '. htmlspecialchars($misionTop['recompensa'])?> </p>
+            <p>
+            <?php
+            // Generar estrellas según dificultad
+            $estrellas = 1;
+            if ($mision['dificultad'] === 'Media') $estrellas = 2;
+            if ($mision['dificultad'] === 'Difícil') $estrellas = 3;
+
+            echo "<p>Dificultad: ";
+            for ($i = 0; $i < $estrellas; $i++) {
+             echo "⭐";
+            }
+            echo "</p>";
+            ?>
+            <span class="badge"><?php echo htmlspecialchars($mision['dificultad']); ?></span>
+            <strong>Recompensa:</strong> <?php echo MONEDA . ' ' . number_format($mision['recompensa'], 0, ',', '.'); ?>
+            </p>
         </div>
     <?php else: ?>
         <p>No hay misiones disponibles.</p>

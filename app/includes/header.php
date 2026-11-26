@@ -17,6 +17,6 @@
 </head>
 <body>
     <div class="container">
-        <h1>🌴 Los Santos Online · Panel de Misiones</h1>
+        <h1>🐊 Los Santos Online · Panel de Misiones 🐊</h1>
         <p><em>Bienvenido, agente. Gestiona tus operaciones en la ciudad.</em></p>
         <hr>

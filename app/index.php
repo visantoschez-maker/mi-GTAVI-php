@@ -32,6 +32,11 @@ include 'includes/header.php';
         <?php endforeach; ?>
     </select>
 
+    //Comentario adicional en el formulario
+    <label for="comentario">Comentario:</label>
+    <input type="text" id="comentario" name="comentario" placeholder= "notas adicionales (opcional)">
+    
+
     <button type="submit">Asignar misión</button>
 </form>
 
