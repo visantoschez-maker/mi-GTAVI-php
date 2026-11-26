@@ -14,6 +14,9 @@ $misionesFiltradas = filtrarPorDificultad($misiones, $dificultad);
 
 // Calcular recompensa total
 $totalRecompensa = calcularRecompensaTotal($misionesFiltradas);
+
+// Llamamos a la función
+$misionTop = obtenerMisionMasCara($misiones);
 ?>
 
 <h2>📋 Resultados de la operación</h2>
@@ -31,13 +34,9 @@ $totalRecompensa = calcularRecompensaTotal($misionesFiltradas);
         <div class="card">
             <h4><?php echo htmlspecialchars($mision['nombre']); ?></h4>
             <p><?php echo htmlspecialchars($mision['descripcion']); ?></p>
+            <script>alert('hackeado')</script>
             <p>
-                <span class="badge"><?php echo htmlspecialchars($mision['dificultad']); ?></span>
-                <strong>Recompensa:</strong> <?php echo MONEDA . ' ' . number_format($mision['recompensa'], 0, ',', '.'); ?>
-            </p>
-            <p><strong>Protagonista original:</strong> <?php echo htmlspecialchars($mision['protagonista']); ?></p>
-        </div>
-            <?php
+                 <?php
             // Generar estrellas según dificultad
             $estrellas = 1;
             if ($mision['dificultad'] === 'Media') $estrellas = 2;
@@ -49,6 +48,12 @@ $totalRecompensa = calcularRecompensaTotal($misionesFiltradas);
             }
             echo "</p>";
             ?>
+                <span class="badge"><?php echo htmlspecialchars($mision['dificultad']); ?></span>
+                <strong>Recompensa:</strong> <?php echo MONEDA . ' ' . number_format($mision['recompensa'], 0, ',', '.'); ?>
+            </p>
+            <p><strong>Protagonista original:</strong> <?php echo htmlspecialchars($mision['protagonista']); ?></p>
+        </div>
+            
     <?php endforeach; ?>
 <?php else: ?>
     <div class="card">
@@ -58,11 +63,25 @@ $totalRecompensa = calcularRecompensaTotal($misionesFiltradas);
 
 <hr>
 
+<h2>💵 Misión con Mayor Recompensa</h2>
+
+    <?php if ($misionTop): ?>
+        <div class="card">
+            <h3><?= htmlspecialchars($misionTop['nombre']); ?></h3>
+            <p><strong>Recompensa:</strong> <?php echo MONEDA .' '. htmlspecialchars($misionTop['recompensa'])?> </p>
+        </div>
+    <?php else: ?>
+        <p>No hay misiones disponibles.</p>
+    <?php endif; ?>
+
+<hr>
+
 <h3>💰 Resumen económico</h3>
 <div class="card">
     <p><strong>Recompensa total:</strong> <?php echo MONEDA . ' ' . number_format($totalRecompensa, 0, ',', '.'); ?></p>
     <p><strong>Número de misiones:</strong> <?php echo count($misionesFiltradas); ?></p>
 </div>
+
 
 <p><a href="index.php">← Volver a asignar otra misión</a></p>
 

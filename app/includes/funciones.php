@@ -37,4 +37,20 @@ function filtrarPorDificultad(array $listaMisiones, string $dificultad): array {
 function saludarAgente(string $nombre): string {
     return "Agente <strong>" . htmlspecialchars($nombre) . "</strong>, bienvenido a " . CIUDAD . ".";
 }
+
+function obtenerMisionMasCara($misiones) {
+    if (empty($misiones)) {
+        return null;
+    }
+
+    $misionMasCara = $misiones[0];
+
+    foreach ($misiones as $mision) {
+        if ($mision['recompensa'] > $misionMasCara['recompensa']) {
+            $misionMasCara = $mision;
+        }
+    }
+
+    return $misionMasCara;
+}
 ?>
