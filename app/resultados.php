@@ -27,9 +27,17 @@ $misionTop = obtenerMisionMasCara($misiones);
 
 <hr>
 
+
 <h3>🎯 Misiones asignadas (<?php echo count($misionesFiltradas); ?>)</h3>
 
 <?php if (count($misionesFiltradas) > 0): ?>
+    <?php 
+    // Ordenar misiones por recompensa de mayor a menor
+    usort($misionesFiltradas, function ($a, $b) {
+        return $b['recompensa'] <=> $a['recompensa'];
+    });
+    ?>
+
     <?php foreach ($misionesFiltradas as $mision): ?>
         <div class="card">
             <h4><?php echo htmlspecialchars($mision['nombre']); ?></h4>
