@@ -15,7 +15,7 @@ $misionesFiltradas = filtrarPorDificultad($misiones, $dificultad);
 // Calcular recompensa total
 $totalRecompensa = calcularRecompensaTotal($misionesFiltradas);
 
-// Llamamos a la función
+// Filtrar la función más cara
 $misionTop = obtenerMisionMasCara($misiones);
 ?>
 

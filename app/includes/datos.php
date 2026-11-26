@@ -47,7 +47,9 @@ $misiones = [
 $personajes = [
     'Michael' => 'Michael De Santa',
     'Franklin' => 'Franklin Clinton',
-    'Trevor' => 'Trevor Philips'
+    'Trevor' => 'Trevor Philips',
+    'Lucia' => 'Lucia Caminos',
+    'Jason' => 'Jason Duval'
 ];
 
 // Array indexado de dificultades
