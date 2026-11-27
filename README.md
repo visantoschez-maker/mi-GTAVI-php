@@ -22,3 +22,4 @@ Además, se ha añadido un campo de texto para introducir comentarios, incorpora
 
 ## 7º- Conclusión 
 Como conclusión, el desarrollo ha permitido mejorar y ampliar la aplicación mediante la incorporación de nuevas funcionalidades y la optimización del código existente. Se ha conseguido automatizar la ordenación de misiones según su recompensa, identificar la misión con mayor valor, generar estrellas dinámicamente según la dificultad y permitir la introducción de comentarios por parte del usuario.
+
