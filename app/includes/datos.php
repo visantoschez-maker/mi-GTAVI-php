@@ -40,6 +40,14 @@ $misiones = [
         'recompensa' => 500000,
         'protagonista' => 'Trevor',
         'descripcion' => 'Intercepta un tren de carga en el desierto.'
+    ],
+    [
+        'id' => 6,
+        'nombre' => 'Robo a Michael',
+        'dificultad' => 'Difícil',
+        'recompensa' => 400000,
+        'protagonista' => 'Jason',
+        'descripcion' => 'Hazte con el barco de Michael.' 
     ]
 ];
 
