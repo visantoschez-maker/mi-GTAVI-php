@@ -16,4 +16,9 @@ He añadido un campo de texto llamado comentario al formulario mediante un < tex
 ## 5º- Ordenar de mayor a menor 
 He utilizado la función usort() para ordenar el array $misionesFiltradas antes de mostrarlas en pantalla. Mediante una función anónima y el operador de comparación <=>, comparo las recompensas de dos misiones, colocando primero la de mayor valor y después la de menor. De esta forma, las misiones aparecen ordenadas de mayor a menor recompensa antes de recorrerlas con el foreach, evitando tener que ordenarlas manualmente y facilitando su visualización en resultados.php.
 
+## 6º- Elementos destacables
+Uno de los elementos más destacables del desarrollo ha sido la mejora de la organización y funcionalidad del código mediante la creación de funciones reutilizables, como generarEstrellas y obtenerMisionMasCara, que permiten simplificar tareas y evitar la repetición de código. También se ha implementado la ordenación de misiones por recompensa de mayor a menor utilizando usort(), facilitando la visualización de los resultados.
+Además, se ha añadido un campo de texto para introducir comentarios, incorporando validaciones de longitud y tipo de dato, así como el uso de htmlspecialchars() para escapar el contenido y mejorar la seguridad frente a posibles ataques XSS.
 
+## 7º- Conclusión 
+Como conclusión, el desarrollo ha permitido mejorar y ampliar la aplicación mediante la incorporación de nuevas funcionalidades y la optimización del código existente. Se ha conseguido automatizar la ordenación de misiones según su recompensa, identificar la misión con mayor valor, generar estrellas dinámicamente según la dificultad y permitir la introducción de comentarios por parte del usuario.
