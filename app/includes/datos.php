@@ -49,6 +49,14 @@ $misiones = [
         'protagonista' => 'Jason',
         'descripcion' => 'Hazte con el barco de Michael.' 
     ]
+    [
+        'id' => 7,
+        'nombre' => 'Vuelve a la cafeteria',
+        'dificultad' => 'Media',
+        'recompensa' => 100,
+        'protagonista' => 'Lucia',
+        'descripcion' => 'Vuelve con tu hijo a la cafeteria sin que te detengan.' 
+    ]
 ];
 
 // Array asociativo de personajes disponibles
